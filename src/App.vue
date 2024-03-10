@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { providerData } = useDocs()
+providerData()
 </script>
 
 <template>

@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@types/lodash-es':
+    specifier: ^4.17.12
+    version: 4.17.12
+  '@v-c/utils':
+    specifier: ^0.0.26
+    version: 0.0.26(typescript@5.4.2)
   '@vueuse/core':
     specifier: ^10.9.0
     version: 10.9.0(vue@3.4.21)
@@ -14,6 +20,9 @@ dependencies:
   haze-md:
     specifier: ^0.0.3
     version: 0.0.3(@types/markdown-it@13.0.7)(vite@5.1.5)(vue@3.4.21)
+  lodash-es:
+    specifier: ^4.17.21
+    version: 4.17.21
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.4.2)(vue@3.4.21)
@@ -1182,6 +1191,16 @@ packages:
     resolution: {integrity: sha512-yg6E+u0/+Zjva+buc3EIb+29XEg4wltq7cSmd4Uc2EE/1nUVmxyzpX6gUXD0V8jIrG0r7YeOGVIbYRkxeooCtw==}
     dev: false
 
+  /@types/lodash-es@4.17.12:
+    resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
+    dependencies:
+      '@types/lodash': 4.14.202
+    dev: false
+
+  /@types/lodash@4.14.202:
+    resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
+    dev: false
+
   /@types/markdown-it@13.0.7:
     resolution: {integrity: sha512-U/CBi2YUUcTHBt5tjO2r5QV/x0Po6nsYwQU4Y04fBS6vfoImaiZ6f8bi3CjTCxBPQSO1LMyUqkByzi8AidyxfA==}
     dependencies:
@@ -1630,6 +1649,17 @@ packages:
     transitivePeerDependencies:
       - rollup
     dev: true
+
+  /@v-c/utils@0.0.26(typescript@5.4.2):
+    resolution: {integrity: sha512-ClcZxr/DMNHe578gExOOzR54gQgniKA0Ltbm7W5lfw5VwSwx5wdsD4qp5530PmAVacDqyPMWWL1zBKx+ZeuATQ==}
+    dependencies:
+      lodash.clonedeep: 4.5.0
+      lodash.isequal: 4.5.0
+      lodash.merge: 4.6.2
+      vue: 3.4.21(typescript@5.4.2)
+    transitivePeerDependencies:
+      - typescript
+    dev: false
 
   /@vitejs/plugin-vue@5.0.4(vite@5.1.5)(vue@3.4.21):
     resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
@@ -3437,9 +3467,16 @@ packages:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: false
 
+  /lodash.clonedeep@4.5.0:
+    resolution: {integrity: sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ==}
+    dev: false
+
+  /lodash.isequal@4.5.0:
+    resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    dev: false
+
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}

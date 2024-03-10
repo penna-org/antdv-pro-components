@@ -14,14 +14,3 @@ import CommonContent from '../common/content.vue'
     </CommonContent>
   </CommmonLayout>
 </template>
-
-<style lang="less">
-.haze-doc{
-  padding: 30px;
-
-  h1{
-    font-size: 30px;
-    line-height: 1.2;
-  }
-}
-</style>

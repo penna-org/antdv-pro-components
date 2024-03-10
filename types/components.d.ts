@@ -17,5 +17,6 @@ declare module 'vue' {
     ProProvider: typeof import('./../src/components/pro-provider.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TokenProvider: typeof import('./../src/components/token-provider.vue')['default']
   }
 }

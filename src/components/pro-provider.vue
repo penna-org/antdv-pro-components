@@ -7,7 +7,9 @@ defineOptions({
 <template>
   <a-config-provider>
     <a-app>
-      <slot />
+      <token-provider>
+        <slot />
+      </token-provider>
     </a-app>
   </a-config-provider>
 </template>

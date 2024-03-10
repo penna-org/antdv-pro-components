@@ -10,9 +10,12 @@
     "lint": "eslint --fix"
   },
   "dependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@v-c/utils": "^0.0.26",
     "@vueuse/core": "^10.9.0",
     "ant-design-vue": "^4.1.2",
     "haze-md": "^0.0.3",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
     "vue": "^3.4.19",
     "vue-i18n": "^9.10.1",
