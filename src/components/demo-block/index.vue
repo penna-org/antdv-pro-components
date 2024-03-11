@@ -49,6 +49,4 @@ const showCode = shallowRef(false)
     padding: 24px;
   }
 }
-.demo-code{
-}
 </style>
