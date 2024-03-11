@@ -7,6 +7,7 @@ const route = useRoute()
 const docFullPage = computed(() => {
   return route.meta?.docFullPage ?? false
 })
+useHandleClick()
 
 const { isMobile } = useQueryBreakpoints()
 
