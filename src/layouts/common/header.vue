@@ -4,10 +4,13 @@ import HeaderMenu from './components/header-menu.vue'
 
 const router = useRouter()
 const route = useRoute()
+const message = useMessage()
 const { siteConfig } = storeToRefs(useAppStore())
 function goHome() {
-  if (route.path === '/')
+  if (route.path === '/') {
+    message.success('当前已经是首页')
     return
+  }
 
   router.push({ path: '/' })
 }
@@ -16,7 +19,7 @@ const { isMobile } = useQueryBreakpoints()
 const headerCls = computed(() => {
   const cls: string[] = []
   if (!isMobile.value)
-    cls.push('ml-6')
+    cls.push('ml-2')
 
   return cls
 })
@@ -30,7 +33,7 @@ const headerCls = computed(() => {
         @click="goHome"
       >
         <img :src="siteConfig.logo" style="height: 34px;width: 34px;">
-        <h1 v-if="!isMobile" class="font-500 text-4.5 ml-1">
+        <h1 v-if="!isMobile" class="font-500 text-4.5 ml-4">
           {{ siteConfig.title ?? '项目文档' }}
         </h1>
       </div>
