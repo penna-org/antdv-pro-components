@@ -37,7 +37,7 @@ const { isMobile } = useQueryBreakpoints()
 </script>
 
 <template>
-  <a-menu v-if="!isMobile" v-model:selectedKeys="headerMenu.selectedKeys" mode="horizontal" :items="items" />
+  <a-menu v-if="!isMobile" v-model:selectedKeys="headerMenu.selectedKeys" mode="horizontal" :items="items" class="header-menu" />
   <a-popover v-else placement="bottomRight">
     <template #content>
       <div w-260px>
@@ -47,3 +47,9 @@ const { isMobile } = useQueryBreakpoints()
     <BarsOutlined />
   </a-popover>
 </template>
+
+<style scoped>
+.header-menu{
+  background-color: transparent !important;
+}
+</style>
