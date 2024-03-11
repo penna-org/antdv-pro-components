@@ -21,8 +21,8 @@ dependencies:
     specifier: ^4.1.2
     version: 4.1.2(vue@3.4.21)
   haze-md:
-    specifier: ^0.0.3
-    version: 0.0.3(@types/markdown-it@13.0.7)(vite@5.1.5)(vue@3.4.21)
+    specifier: ^0.0.4
+    version: 0.0.4(@types/markdown-it@13.0.7)(vite@5.1.5)(vue@3.4.21)
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -3081,8 +3081,8 @@ packages:
       function-bind: 1.1.2
     dev: true
 
-  /haze-md@0.0.3(@types/markdown-it@13.0.7)(vite@5.1.5)(vue@3.4.21):
-    resolution: {integrity: sha512-m9I79ltCQ0KLuRDDOstLJsLMNFLKq2SuWOMfRhGYmV4Bhyduong4KtCvRp00+HsiajRaw74QVk6+7qskFdHGtw==}
+  /haze-md@0.0.4(@types/markdown-it@13.0.7)(vite@5.1.5)(vue@3.4.21):
+    resolution: {integrity: sha512-4PW9OdtustcEfiVrhYB0OjruiAI24pSplGrPxepEzf35YolKj/F9S2hl5YrVm9y2jGfEuuW/YRE//S7xw8OWNA==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
       vue: ^3.0.0-0

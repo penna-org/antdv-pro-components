@@ -34,14 +34,32 @@ watch(() => route.path, () => {
 })
 
 const { isMobile } = useQueryBreakpoints()
+const router = useRouter()
+function change(keys: any[]) {
+  headerMenu.value.selectedKeys = keys
+  router.push({ path: keys[0] })
+}
 </script>
 
 <template>
-  <a-menu v-if="!isMobile" v-model:selectedKeys="headerMenu.selectedKeys" mode="horizontal" :items="items" class="header-menu" />
+  <a-menu
+    v-if="!isMobile"
+    :selected-keys="headerMenu.selectedKeys"
+    mode="horizontal"
+    :items="items"
+    class="header-menu"
+    @update:selected-keys="change"
+  />
   <a-popover v-else placement="bottomRight">
     <template #content>
       <div w-260px>
-        测试内容
+        <a-menu
+          :selected-keys="headerMenu.selectedKeys"
+          mode="inline"
+          :items="items"
+          class="header-menu"
+          @update:selected-keys="change"
+        />
       </div>
     </template>
     <BarsOutlined />
@@ -51,5 +69,7 @@ const { isMobile } = useQueryBreakpoints()
 <style scoped>
 .header-menu{
   background-color: transparent !important;
+  border-bottom: unset!important;
+  border-right: unset!important;
 }
 </style>

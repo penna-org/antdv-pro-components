@@ -19,6 +19,11 @@ const docsClass = computed(() => {
   }
   return classs
 })
+
+const { pageData } = useDocs()
+watch(pageData, () => {
+  console.log(pageData)
+})
 </script>
 
 <template>

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useClipboard } from '@v-c/utils'
 import { LinkOutlined } from '@ant-design/icons-vue'
+import { camelCase } from 'lodash-es'
 import Icon from './icon.vue'
 import demosData from './globs'
 
@@ -12,10 +13,17 @@ const props = defineProps<{
 const message = useMessage()
 const Comp = shallowRef()
 const lang = shallowRef('zh-CN')
-const info = shallowRef({})
+const info = shallowRef<Record<string, any>>({})
 const block = shallowRef({
   code: '',
   html: ''
+})
+
+const title = computed(() => {
+  return info.value.title ?? ''
+})
+const desc = computed(() => {
+  return decodeURIComponent(info.value.desc ?? '')
 })
 async function loadComp() {
   const { default: comp } = (demosData as any)[props.src]
@@ -44,10 +52,11 @@ function handleCopy() {
 }
 if (props.iframe && !props.link)
   console.warn('iframe模式下必须传入link')
+const id = computed(() => camelCase(props.src))
 </script>
 
 <template>
-  <div class="flex flex-col demo-block">
+  <div :id="id" class="flex flex-col demo-block">
     <template v-if="iframe && link">
       <IframeBlock :src="link" />
     </template>
@@ -58,6 +67,10 @@ if (props.iframe && !props.link)
     </template>
 
     <div class="flex flex-col">
+      <div v-if="title">
+        <a :href="`#${id}`" class="demo-block-title" :data-title="title" />
+        <div v-if="desc" class="demo-block-desc" v-html="desc" />
+      </div>
       <div class="flex items-center justify-center h-38px gap-4 demo-block-actions">
         <Icon :tooltip="copied ? undefined : '复制内容'" @click="handleCopy">
           <FileCopy v-if="!copied" :class="`code-expand-icon-${!copied ? 'show' : 'hide'}`" />
@@ -87,6 +100,28 @@ if (props.iframe && !props.link)
 
   &-component{
     padding: 24px;
+  }
+
+  &-title{
+    position: relative;
+    display: block;
+    border-top: 1px solid var(--ant-pro-color-border-secondary);
+
+    &::after{
+      content: attr(data-title);
+      position: absolute;
+      top: -0.75em;
+      left: 1.5em;
+      padding: 0 8px;
+      background-color: var(--vp-c-bg);
+      color: var(--ant-pro-color-text);
+      font-size: 14px;
+      border-radius: 2px;
+    }
+  }
+
+  &-desc{
+    padding: 8px 24px;
   }
 
   &-actions{
