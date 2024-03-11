@@ -19,10 +19,13 @@ export default defineConfig({
     VueRouter({
       extensions: ['.vue', '.md'],
       dts: './types/typed-router.d.ts',
+      extendRoute(route) {
+        const fileName = route.components.has('default') ? route.components.get('default') : ''
+        if (fileName?.endsWith('.md'))
+          route.addToMeta({ layout: 'doc' })
+      }
     }),
-    Layouts({
-      defaultLayout: 'doc'
-    }),
+    Layouts(),
     md(),
     vue({
       include: [/\.vue$/, /\.md$/]

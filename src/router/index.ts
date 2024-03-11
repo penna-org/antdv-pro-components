@@ -3,7 +3,10 @@ import { setupLayouts } from 'virtual:generated-layouts'
 
 const router = createRouter({
   history: createWebHistory(),
-  extendRoutes: routes => setupLayouts(routes)
+  extendRoutes: (routes) => {
+    const layouts = setupLayouts(routes)
+    return layouts
+  }
 })
 
 export default router

@@ -10,6 +10,12 @@
   * 萨达
   * 撒旦撒
 
+### 代码演示
+
+项目代码演示
+
+<demo src="./demos/basic.vue" link="/guide/demos/basic"/>
+
 :::tip 测试
 测试提示内容
 :::
@@ -50,9 +56,3 @@
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      |   centered    |   $12 |
 | zebra stripes |   are neat    |    $1 |
-
-### 代码演示
-
-项目代码演示
-
-<demo src="./demos/basic.vue" />
