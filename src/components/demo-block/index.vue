@@ -68,7 +68,7 @@ const id = computed(() => camelCase(props.src))
 
     <div class="flex flex-col">
       <div v-if="title">
-        <a :href="`#${id}`" class="demo-block-title" :data-title="title" />
+        <a :href="`#${id}`" :data-id="id" class="demo-block-title" :data-title="title" />
         <div v-if="desc" class="demo-block-desc" v-html="desc" />
       </div>
       <div class="flex items-center justify-center h-38px gap-4 demo-block-actions">

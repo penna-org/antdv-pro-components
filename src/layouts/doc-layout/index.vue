@@ -2,6 +2,7 @@
 import CommonHeader from '../common/header.vue'
 import CommmonLayout from '../common/layout.vue'
 import CommonContent from '../common/content.vue'
+import { useAncher } from './ancher'
 
 const route = useRoute()
 const docFullPage = computed(() => {
@@ -20,11 +21,7 @@ const docsClass = computed(() => {
   }
   return classs
 })
-
-const { pageData } = useDocs()
-watch(pageData, () => {
-  console.log(pageData)
-})
+useAncher()
 </script>
 
 <template>
