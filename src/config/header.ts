@@ -1,4 +1,9 @@
-export const headerConfig = [
+export interface HeaderConfig {
+  path: string
+  title: string
+}
+
+export const headerConfig: HeaderConfig[] = [
   {
     path: '/guide',
     title: '指引'
@@ -10,5 +15,3 @@ export const headerConfig = [
 ] as const
 
 export default headerConfig
-
-export type HeaderPathKey = typeof headerConfig[number]['path']

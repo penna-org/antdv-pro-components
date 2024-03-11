@@ -1,0 +1,18 @@
+import type { HeaderConfig } from './header'
+import type { SiderConfigItem } from './sider'
+import { headerConfig } from './header'
+import { siderConfig } from './sider'
+
+export interface SiteConfig {
+  title?: string
+  logo?: string
+  headers?: HeaderConfig[]
+  siderbar?: Record<string, SiderConfigItem[]>
+}
+
+export default {
+  title: 'Antdv Pro 商业版文档',
+  logo: '/logo.svg',
+  headers: headerConfig,
+  siderbar: siderConfig
+} as SiteConfig

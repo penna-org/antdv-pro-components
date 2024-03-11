@@ -16,6 +16,13 @@ const base = fileURLToPath(new URL('.', import.meta.url))
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    VueRouter({
+      extensions: ['.vue', '.md'],
+      dts: './types/typed-router.d.ts',
+    }),
+    Layouts({
+      defaultLayout: 'doc'
+    }),
     md(),
     vue({
       include: [/\.vue$/, /\.md$/]
@@ -45,13 +52,6 @@ export default defineConfig({
       dts: './types/auto-imports.d.ts',
     }),
     Unocss(),
-    VueRouter({
-      extensions: ['.vue', '.md'],
-      dts: './types/typed-router.d.ts',
-    }),
-    Layouts({
-      defaultLayout: 'doc'
-    })
   ],
   resolve: {
     alias: [

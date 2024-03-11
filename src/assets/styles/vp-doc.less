@@ -1,7 +1,6 @@
 .vp-doc{
-    padding: 30px;
+    padding: 24px;
     
-
     p{
         margin: 1em 0;
     }
@@ -41,4 +40,34 @@
     h2,h3,h4,h5,h6{
        margin: 1.6em 0 .6em;
     }
+
+    [class*=language-] code{
+        font-size: 1.1em;
+    }
+
+    table{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+
+
+        tr:nth-child(2n){
+            background: unset;
+        }
+
+        tbody tr:hover{
+            background: var(--ant-pro-color-fill-tertiary);
+        }
+
+        th,td{
+            padding: 16px 24px;
+            text-align: left;
+            border: 1px solid var(--ant-pro-color-fill-secondary);
+        }
+
+        th{
+            color: var(--ant-pro-color-text)
+        }
+    }
+
 }

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { App } from 'ant-design-vue'
-import { useAntd } from '@/composables/antdv'
 
 defineOptions({
   name: 'ProTokenProvider',

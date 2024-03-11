@@ -2,10 +2,11 @@
 defineOptions({
   name: 'ProProvider',
 })
+const { themeConfig } = storeToRefs(useAppStore())
 </script>
 
 <template>
-  <a-config-provider>
+  <a-config-provider :theme="themeConfig">
     <a-app>
       <token-provider>
         <slot />
