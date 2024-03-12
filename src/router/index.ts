@@ -18,7 +18,7 @@ const router = createRouter({
         ...savedPosition,
         top,
         behavior: 'smooth'
-      } as any
+      }
     }
 
     if (to.hash)

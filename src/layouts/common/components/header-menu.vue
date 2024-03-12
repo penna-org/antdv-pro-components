@@ -28,6 +28,7 @@ watch(() => route.path, () => {
         break
       }
     }
+    headerMenu.value.selectedKeys = []
   }
 }, {
   immediate: true

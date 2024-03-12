@@ -1,14 +1,13 @@
 export function useAncher() {
   const anchors = ref<any[]>([])
   const { pageData } = useDocs()
-  const route = useRoute()
 
   const getAnchers = (headers: any[]) => {
     const result: any[] = []
     for (const header of headers) {
       const anchor: Record<string, any> = {
         title: header.title,
-        link: `#${header.slug}`,
+        href: `#${header.slug}`,
         key: header.slug
       }
 
@@ -23,13 +22,13 @@ export function useAncher() {
             if (anchor.children) {
               anchor.children.push({
                 title,
-                link: `#${id}`,
+                href: `#${id}`,
                 key: id
               })
             } else {
               anchor.children = [{
                 title,
-                link: `#${id}`,
+                href: `#${id}`,
                 key: id
               }]
             }
@@ -41,6 +40,7 @@ export function useAncher() {
         anchor.children = getAnchers(header.children)
       result.push(anchor)
     }
+
     return result
   }
   watch(pageData, () => {
@@ -49,13 +49,11 @@ export function useAncher() {
     flush: 'post'
   })
 
-  watch(() => route.path, () => {
+  onBeforeRouteLeave(() => {
     anchors.value = []
   })
 
-  onMounted(() => {
-    // anchors.value = getAnchers(pageData.value.headers || [])
-  })
   return {
+    anchors
   }
 }

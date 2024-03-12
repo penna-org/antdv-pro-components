@@ -1,6 +1,7 @@
 export interface SiderConfigItem {
   path: string
   title: string
+  items?: SiderConfigItem[]
 }
 
 export const siderConfig: Record<string, SiderConfigItem[]> = {
@@ -12,6 +13,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
     {
       path: '/guide/quickstart',
       title: '快速上手'
+    },
+    {
+      path: '/guide/test',
+      title: '测试'
     }
   ],
   '/components': []

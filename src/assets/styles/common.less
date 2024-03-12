@@ -40,3 +40,12 @@ html.dark{
 .dark::view-transition-old(root) {
   z-index: 9999;
 }
+
+#app,.ant-app,.haze-layout{
+  min-height: 100vh;
+
+  .ant-layout-content{
+    min-height: calc(100vh - 58px);
+  }
+}
+
