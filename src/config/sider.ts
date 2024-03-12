@@ -19,5 +19,25 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       title: '测试'
     }
   ],
+  '/backend': [
+    {
+      path: '/backend',
+      title: '项目介绍'
+    },
+    {
+      path: '/backend/setup',
+      title: '开发环境准备',
+      items: [
+        {
+          path: '/backend/setup/build',
+          title: 'JAVA开发环境搭建'
+        },
+        {
+          path: '/backend/setup/import',
+          title: 'IDEA导入项目'
+        }
+      ]
+    }
+  ],
   '/components': []
 }

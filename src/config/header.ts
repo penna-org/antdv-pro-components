@@ -9,6 +9,10 @@ export const headerConfig: HeaderConfig[] = [
     title: '指引'
   },
   {
+    path: '/backend',
+    title: '后端文档'
+  },
+  {
     path: '/components',
     title: '组件',
   }
