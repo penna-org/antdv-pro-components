@@ -25,7 +25,7 @@ const docCls = computed(() => {
     <CommonContent class="flex flex-col">
       <div class="flex flex-1 h-full w-full">
         <Side v-if="!isMobile" />
-        <div class="vp-doc haze-doc" :class="docCls">
+        <div class="vp-doc haze-doc w-full" :class="docCls">
           <RouterView />
         </div>
         <template v-if="!isMobile && anchors && anchors.length">
