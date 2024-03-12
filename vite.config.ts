@@ -61,7 +61,15 @@ export default defineConfig({
       {
         find: '@',
         replacement: path.resolve(base, 'src')
-      }
+      },
+      {
+        find: /^@antdv-enterprise\/layout/,
+        replacement: path.resolve(base, 'packages/layout/src'),
+      },
+      {
+        find: /^@antdv-enterprise\/components/,
+        replacement: path.resolve(base, 'packages/components/src'),
+      },
     ]
   }
 })

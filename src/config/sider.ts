@@ -39,5 +39,20 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       ]
     }
   ],
-  '/components': []
+  '/components': [
+    {
+      path: '/components',
+      title: '介绍'
+    },
+    {
+      path: '/components/pro-form',
+      title: '高级表单',
+      items: [
+        {
+          path: '/components/pro-form/basic',
+          title: '基础使用'
+        }
+      ]
+    }
+  ]
 }
