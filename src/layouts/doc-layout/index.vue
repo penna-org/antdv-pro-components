@@ -13,7 +13,7 @@ const { anchors } = useAncher()
 const docCls = computed(() => {
   const classs = []
   if (!isMobile.value)
-    classs.push(...['w-1000px', 'mx-auto', 'my-24px', 'haze-doc-shadow'])
+    classs.push(...['m-48px', 'haze-doc-shadow'])
 
   return classs
 })
@@ -29,7 +29,7 @@ const docCls = computed(() => {
           <RouterView />
         </div>
         <template v-if="!isMobile && anchors && anchors.length">
-          <div class="w-240px pr-24px flex-shrink-0">
+          <div class="w-240px pr-24px flex-shrink-0 ">
             <a-anchor :items="anchors" :offset-top="80" />
           </div>
         </template>
@@ -40,7 +40,7 @@ const docCls = computed(() => {
 
 <style>
 .haze-doc-shadow{
-  box-shadow: var(--ant-pro-box-shadow-card);
+  box-shadow: var(--ant-pro-box-shadow-popover-arrow);
   border-radius: 8px;
   font-size: 16px;
 }
