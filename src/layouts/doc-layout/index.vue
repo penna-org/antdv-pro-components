@@ -13,7 +13,7 @@ const { anchors } = useAncher()
 const docCls = computed(() => {
   const classs = []
   if (!isMobile.value)
-    classs.push(...['m-48px', 'haze-doc-shadow'])
+    classs.push(...['m-36px', 'haze-doc-shadow'])
 
   return classs
 })
@@ -40,8 +40,16 @@ const docCls = computed(() => {
 
 <style>
 .haze-doc-shadow{
-  box-shadow: var(--ant-pro-box-shadow-popover-arrow);
+  box-shadow: 0 8px 24px #0000000d;
   border-radius: 8px;
   font-size: 16px;
+}
+
+.dark{
+  .vp-doc{
+    img{
+      opacity: 0.8;
+    }
+  }
 }
 </style>
