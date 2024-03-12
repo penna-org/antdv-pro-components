@@ -27,21 +27,19 @@ const items = shallowRef<any[]>([])
 
 watch(() => route.path, () => {
   sideMenus.value = []
+  const matched = route.matched ?? []
+
   const path = route.path
   const menus = siteConfig.value.siderbar ?? {}
-  const keys = Object.keys(menus)
-  for (const key of keys) {
-    if (path.startsWith(key)) {
-      const siderbars = siteConfig.value?.siderbar?.[key] ?? []
-      for (const siderbar of siderbars) {
-        if (path === siderbar.path) {
-          sideMenus.value = siderbars
-          headerMenu.value.selectedKeys = [key]
-          break
-        }
-      }
+
+  for (const key of matched) {
+    if (menus[key.path]) {
+      sideMenus.value = menus[key.path]
+      headerMenu.value.selectedKeys = [key.path]
+      break
     }
   }
+
   items.value = formatSite(sideMenus.value ?? [])
   siderMenu.value.selectedKeys = [path]
 }, {
