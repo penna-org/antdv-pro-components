@@ -2,6 +2,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import { tsxResolveTypes } from 'vite-plugin-tsx-resolve-types'
 import md from 'haze-md/plugin'
 import Components from 'unplugin-vue-components/vite'
 import AntdvResolver from 'antdv-component-resolver'
@@ -30,6 +32,8 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/]
     }),
+    vueJsx(),
+    tsxResolveTypes(),
     Components({
       resolvers: [
         AntdvResolver(),
@@ -107,5 +111,8 @@ export default defineConfig({
         replacement: path.resolve(base, 'packages/components/src'),
       },
     ]
+  },
+  optimizeDeps: {
+    exclude: ['ant-design-vue']
   }
 })
