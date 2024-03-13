@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm build
+        run: pnpm build:no
       - name: Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
