@@ -59,6 +59,42 @@ export default defineConfig({
   resolve: {
     alias: [
       {
+        find: 'dayjs',
+        replacement: 'dayjs/esm',
+      },
+      {
+        find: /^dayjs\/locale/,
+        replacement: 'dayjs/esm/locale',
+      },
+      {
+        find: /^dayjs\/plugin/,
+        replacement: 'dayjs/esm/plugin',
+      },
+      // {
+      //   find: 'vue-i18n',
+      //   replacement: mode === 'development' ? 'vue-i18n/dist/vue-i18n.esm-browser.js' : 'vue-i18n/dist/vue-i18n.esm-bundler.js',
+      // },
+      {
+        find: /^ant-design-vue\/es$/,
+        replacement: 'ant-design-vue/es',
+      },
+      {
+        find: /^ant-design-vue\/dist$/,
+        replacement: 'ant-design-vue/dist',
+      },
+      {
+        find: /^ant-design-vue\/lib$/,
+        replacement: 'ant-design-vue/es',
+      },
+      {
+        find: /^ant-design-vue$/,
+        replacement: 'ant-design-vue/es',
+      },
+      {
+        find: 'lodash',
+        replacement: 'lodash-es',
+      },
+      {
         find: '@',
         replacement: path.resolve(base, 'src')
       },
