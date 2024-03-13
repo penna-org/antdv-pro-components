@@ -18,6 +18,16 @@ const schemas = shallowRef<SchemaItem[]>([
   {
     dataIndex: 'name',
     title: '姓名',
+  },
+  {
+    dataIndex: 'status',
+    title: '状态',
+    valueEnum: {
+      all: { text: '全部', status: 'Default' },
+      open: { text: '未解决', status: 'Error' },
+      closed: { text: '已解决', status: 'Success' },
+      processing: { text: '解决中', status: 'Processing' },
+    }
   }
 ])
 </script>
