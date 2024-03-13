@@ -49,8 +49,8 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       title: '高级表单',
       items: [
         {
-          path: '/components/pro-form/basic',
-          title: '基础使用'
+          path: '/components/pro-form/schema',
+          title: 'SchemaForm'
         }
       ]
     }

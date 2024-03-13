@@ -39,5 +39,9 @@
       "jsonc",
       "yaml",
       "toml"
+    ],
+    "i18n-ally.localesPaths": [
+      "packages/components/src/locales",
+      "packages/layout/src/locales"
     ]
   }
