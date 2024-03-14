@@ -1,6 +1,6 @@
 # SchemaForm
 
-这是基于Schema进行渲染的表单，其中表单的数据是和表格中的`columns`的数据格式是一致的，降低学习成本。
+这是采用`Json Schema`的形式进行渲染的表单，其中表单的数据是和表格中的`columns`的数据格式是一致的，降低学习成本。
 
 ## 基本使用
 
@@ -32,4 +32,4 @@ const schemas: SchemaItem<Data> = [
 
 ## 代码演示
 
-<demo src="./demos/schema-form/basic.vue" />
+<demo src="./demos/basic.vue" />

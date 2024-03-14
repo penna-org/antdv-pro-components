@@ -5,8 +5,8 @@
   "private": true,
   "packageManager": "pnpm@8.15.4",
   "scripts": {
-    "init": "git submodule init && git submodule update",
-    "update": "git submodule update --remote --merge",
+    "sub": "git submodule init && git submodule update",
+    "sub:up": "git submodule update --remote --merge",
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "build:no": "vite build",

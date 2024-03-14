@@ -50,7 +50,7 @@ watch(() => route.path, () => {
       break
     }
   }
-  siderMenu.value.open = getActiveOpens(sideMenus.value ?? [], path)
+  siderMenu.value.open = [...headerMenu.value.selectedKeys, ...getActiveOpens(sideMenus.value ?? [], path)]
 
   items.value = formatSite(sideMenus.value ?? [])
   siderMenu.value.selectedKeys = [path]
