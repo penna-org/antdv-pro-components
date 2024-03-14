@@ -24,7 +24,18 @@ function formatSite(sides: SiderConfigItem[]) {
   return items
 }
 const items = shallowRef<any[]>([])
-
+function getActiveOpens(menus: any[], path: string, opens: any[] = []) {
+  for (const menu of menus) {
+    if (menu.path === path) {
+      return opens
+    } else {
+      opens.push(menu.path)
+      if (menu.items)
+        return getActiveOpens(menu.items, path, [...opens])
+    }
+  }
+  return opens
+}
 watch(() => route.path, () => {
   sideMenus.value = []
   const matched = route.matched ?? []
@@ -39,6 +50,7 @@ watch(() => route.path, () => {
       break
     }
   }
+  siderMenu.value.open = getActiveOpens(sideMenus.value ?? [], path)
 
   items.value = formatSite(sideMenus.value ?? [])
   siderMenu.value.selectedKeys = [path]
@@ -57,6 +69,7 @@ function handleChange(keys: any[]) {
 <template>
   <div v-if="items.length" class="w-300px of-y-auto of-x-hidden fixed top-58px side-menu">
     <a-menu
+      v-model:open-keys="siderMenu.open"
       class="w-full h-full pt-16px"
       :selected-keys="siderMenu.selectedKeys"
       :items="items" mode="inline"
