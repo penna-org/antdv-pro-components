@@ -7,7 +7,7 @@ title: 依赖关联
 </docs>
 
 <script lang="ts" setup>
-import type { SchemaItem } from '@antdv-enterprise/components'
+import type { SchemaFormDependAction, SchemaItem } from '@antdv-enterprise/components'
 import { SchemaForm } from '@antdv-enterprise/components'
 
 const schemas = shallowRef<SchemaItem[]>([
@@ -39,8 +39,13 @@ const schemas = shallowRef<SchemaItem[]>([
         value: 'suzhou',
       }
     ],
-    onDepend() {
-      // TODO
+    onDepend(params, action: SchemaFormDependAction) {
+      if (params.value === 'zhejiang')
+        action.setValue('hangzhou')
+      else if (params.value === 'jiangsu')
+        action.setValue('suzhou')
+      else
+        action.setValue(undefined)
     }
   }
 ])

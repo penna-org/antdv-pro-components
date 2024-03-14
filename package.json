@@ -19,7 +19,7 @@
     "@v-c/utils": "^0.0.26",
     "@vueuse/core": "^10.9.0",
     "ant-design-vue": "^4.1.2",
-    "haze-md": "^0.0.5",
+    "haze-md": "^0.0.6",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
     "vue": "^3.4.19",

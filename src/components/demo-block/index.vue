@@ -56,7 +56,7 @@ const id = computed(() => camelCase(props.src))
 </script>
 
 <template>
-  <div :id="id" class="flex flex-col demo-block">
+  <div :id="id" class="flex flex-col demo-block mb-4">
     <template v-if="iframe && link">
       <IframeBlock :src="link" />
     </template>
@@ -82,8 +82,8 @@ const id = computed(() => camelCase(props.src))
           </a>
         </Icon>
         <Icon :tooltip="!showCode ? '显示代码' : '隐藏代码'" @click="handleExpand">
-          <Expand v-if="showCode" :class="`code-expand-icon-${showCode ? 'show' : 'hide'}`" />
-          <UnExpand v-else :class="`code-expand-icon-${!showCode ? 'show' : 'hide'}`" />
+          <UnExpand v-if="showCode" :class="`code-expand-icon-${showCode ? 'show' : 'hide'}`" />
+          <Expand v-else :class="`code-expand-icon-${!showCode ? 'show' : 'hide'}`" />
         </Icon>
       </div>
       <template v-if="showCode">
