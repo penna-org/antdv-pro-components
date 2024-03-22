@@ -55,6 +55,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
         {
           path: '/components/schema-form/depend',
           title: '联动关系'
+        },
+        {
+          path: '/components/schema-form/request',
+          title: '远程请求'
         }
       ]
     }

@@ -27,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/components/schema-form/demos/basic': RouteRecordInfo<'/components/schema-form/demos/basic', '/components/schema-form/demos/basic', Record<never, never>, Record<never, never>>,
     '/components/schema-form/demos/depend': RouteRecordInfo<'/components/schema-form/demos/depend', '/components/schema-form/demos/depend', Record<never, never>, Record<never, never>>,
     '/components/schema-form/demos/depend-event': RouteRecordInfo<'/components/schema-form/demos/depend-event', '/components/schema-form/demos/depend-event', Record<never, never>, Record<never, never>>,
+    '/components/schema-form/demos/request': RouteRecordInfo<'/components/schema-form/demos/request', '/components/schema-form/demos/request', Record<never, never>, Record<never, never>>,
     '/components/schema-form/depend': RouteRecordInfo<'/components/schema-form/depend', '/components/schema-form/depend', Record<never, never>, Record<never, never>>,
     '/components/schema-form/request': RouteRecordInfo<'/components/schema-form/request', '/components/schema-form/request', Record<never, never>, Record<never, never>>,
     '/guide/': RouteRecordInfo<'/guide/', '/guide', Record<never, never>, Record<never, never>>,
