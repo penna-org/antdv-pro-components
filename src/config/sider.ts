@@ -61,6 +61,24 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
           title: '远程请求'
         }
       ]
+    },
+    {
+      path: '/components/pro-table',
+      title: 'ProTable',
+      items: [
+        {
+          path: '/components/pro-table/basic',
+          title: '基础使用'
+        },
+        {
+          path: '/components/pro-table/toolbar',
+          title: '工具栏'
+        },
+        {
+          path: '/components/pro-table/request',
+          title: '远程请求'
+        }
+      ]
     }
   ]
 }
