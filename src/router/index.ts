@@ -4,8 +4,7 @@ import { setupLayouts } from 'virtual:generated-layouts'
 const router = createRouter({
   history: createWebHistory(),
   extendRoutes: (routes) => {
-    const layouts = setupLayouts(routes)
-    return layouts
+    return setupLayouts(routes)
   },
   scrollBehavior(to, _from, savedPosition) {
     if (savedPosition)
@@ -21,8 +20,7 @@ const router = createRouter({
       }
     }
 
-    if (to.hash)
-    {
+    if (to.hash) {
       return {
         el: to.hash,
         top: 30,
