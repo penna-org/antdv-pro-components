@@ -51,12 +51,4 @@ export function useHandleClick() {
   }, {
     capture: true,
   })
-
-  window.addEventListener('hashchange', (event) => {
-    // 阻止默认行为
-    event.preventDefault()
-
-    // 可以在这里添加自定义的处理逻辑
-    console.log('Hash changed to:', location.hash)
-  })
 }
