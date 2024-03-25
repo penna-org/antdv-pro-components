@@ -5,20 +5,21 @@ function scrollTo(el: Element, hash: string, smooth = false) {
     target = el.classList.contains('header-anchor')
       ? el
       : document.getElementById(decodeURIComponent(hash).slice(1))
-  } catch (e) {
+  }
+  catch (e) {
     console.warn(e)
   }
 
   if (target) {
     const targetPadding = Number.parseInt(
       window.getComputedStyle(target).paddingTop,
-      10
+      10,
     )
     const targetTop
-        = window.scrollY
-        + target.getBoundingClientRect().top
-        - 80
-        + targetPadding
+            = window.scrollY
+            + target.getBoundingClientRect().top
+            - 80
+            + targetPadding
     function scrollToTarget() {
       // only smooth scroll if distance is smaller than screen height.
       if (!smooth || Math.abs(targetTop - window.scrollY) > window.innerHeight)
@@ -36,10 +37,26 @@ export function useHandleClick() {
       e.preventDefault()
       const anchor = el as HTMLAnchorElement
       const href = anchor.getAttribute('href')
-      if (href && href.startsWith('#'))
+      const currentUrl = new URL(location.href) // copy to keep old data
+
+      if (href && href.startsWith('#')) {
+        if (currentUrl.hash !== href) {
+          history.pushState(null, '', href)
+          window.dispatchEvent(new Event('hashchange'))
+        }
+
         scrollTo(el, href, true)
+      }
     }
   }, {
     capture: true,
+  })
+
+  window.addEventListener('hashchange', (event) => {
+    // 阻止默认行为
+    event.preventDefault()
+
+    // 可以在这里添加自定义的处理逻辑
+    console.log('Hash changed to:', location.hash)
   })
 }
