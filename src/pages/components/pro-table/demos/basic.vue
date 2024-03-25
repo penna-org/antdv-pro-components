@@ -39,7 +39,7 @@ const data = Array.from({ length: 10 }, (_, key) => ({
 
 <template>
   <div>
-    <ProTable :columns="columns" :data-source="data" :search="false" :show-toolbar="false" />
+    <ProTable style="padding: 0" :columns="columns" :data-source="data" :search="false" :show-toolbar="false" />
   </div>
 </template>
 
