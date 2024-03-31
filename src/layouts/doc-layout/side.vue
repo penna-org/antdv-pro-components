@@ -30,12 +30,16 @@ function getActiveOpens(menus: any[], path: string, opens: any[] = []) {
       return opens
     } else {
       opens.push(menu.path)
-      if (menu.items)
-        return getActiveOpens(menu.items, path, [...opens])
+      if (menu.items) {
+        const opensData = getActiveOpens(menu.items, path, [...opens])
+        if (opensData.length)
+          opens.push([...opensData])
+      }
     }
   }
   return opens
 }
+
 watch(() => route.path, () => {
   sideMenus.value = []
   const matched = route.matched ?? []
@@ -50,7 +54,9 @@ watch(() => route.path, () => {
       break
     }
   }
-  siderMenu.value.open = [...headerMenu.value.selectedKeys, ...getActiveOpens(sideMenus.value ?? [], path)]
+
+  const opensData = matched.filter(v => v.path !== path).map(v => v.path)
+  siderMenu.value.open = [...new Set([...headerMenu.value.selectedKeys, ...siderMenu.value.open, ...opensData])]
 
   items.value = formatSite(sideMenus.value ?? [])
   siderMenu.value.selectedKeys = [path]

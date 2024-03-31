@@ -7,8 +7,9 @@ title: 基础用法
 </docs>
 
 <script lang="ts" setup>
-import type { SchemaItem } from '@antdv-enterprise/components'
+import type { SchemaFormInstance, SchemaItem } from '@antdv-enterprise/components'
 import { SchemaForm } from '@antdv-enterprise/components'
+import { shallowRef } from 'vue'
 
 const schemas = shallowRef<SchemaItem[]>([
   {
@@ -63,15 +64,31 @@ const schemas = shallowRef<SchemaItem[]>([
     title: '数字输入框'
   },
   {
+    dataIndex: 'digitRange',
+    title: '数字范围',
+    valueType: 'digitRange'
+  },
+  {
     dataIndex: 'password',
     valueType: 'password',
     title: '密码输入框'
   }
 ])
+const formRef = shallowRef<SchemaFormInstance>()
+function submit() {
+  const data = formRef.value?.getFormData?.()
+  // eslint-disable-next-line no-console
+  console.log(data)
+}
 </script>
 
 <template>
   <div>
-    <SchemaForm :schemas="schemas" />
+    <SchemaForm ref="formRef" :schemas="schemas" />
+    <div class="flex gap-4">
+      <a-button @click="submit">
+        获取数据
+      </a-button>
+    </div>
   </div>
 </template>
