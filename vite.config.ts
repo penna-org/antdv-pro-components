@@ -112,6 +112,9 @@ export default defineConfig({
       },
     ]
   },
+  server: {
+    port: 7556
+  },
   optimizeDeps: {
     exclude: ['ant-design-vue']
   }
