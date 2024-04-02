@@ -66,7 +66,18 @@ const schemas = shallowRef<SchemaItem[]>([
   {
     dataIndex: 'digitRange',
     title: '数字范围',
-    valueType: 'digitRange'
+    valueType: 'digitRange',
+    serialize(value) {
+      if (value)
+        return value.filter((v: any) => v !== undefined && v !== null).join(',')
+      return value
+    },
+    deserialize(value) {
+      if (value && typeof value === 'string')
+        return value.split(',').map(Number)
+
+      return value
+    },
   },
   {
     dataIndex: 'password',
