@@ -83,6 +83,39 @@ const schemas = shallowRef<SchemaItem[]>([
     dataIndex: 'password',
     valueType: 'password',
     title: '密码输入框'
+  },
+  {
+    dataIndex: 'date',
+    valueType: 'date',
+    title: '日期组件'
+  },
+  {
+    dataIndex: 'dateTime',
+    valueType: 'date',
+    fieldProps: {
+      showTime: true
+    },
+    title: '显示时间'
+  },
+  {
+    dataIndex: 'week',
+    valueType: 'week',
+    title: '日期组件'
+  },
+  {
+    dataIndex: 'dateRange',
+    valueType: 'dateRange',
+    title: '日期区间'
+  },
+  {
+    dataIndex: 'time',
+    valueType: 'time',
+    title: '选择时间'
+  },
+  {
+    dataIndex: 'timeRange',
+    valueType: 'timeRange',
+    title: '时间区间'
   }
 ])
 const formRef = shallowRef<SchemaFormInstance>()
