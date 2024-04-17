@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@9.0.2",
   "scripts": {
     "sub": "git submodule init && git submodule update",
     "sub:up": "git submodule update --remote --merge",
@@ -22,28 +22,28 @@
     "haze-md": "^0.0.6",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21",
-    "vue-i18n": "^9.10.2",
-    "vue-router": "^4.3.0"
+    "vue": "^3.4.23",
+    "vue-i18n": "^9.13.0",
+    "vue-router": "^4.3.1"
   },
   "devDependencies": {
     "@antdv-enterprise/components": "workspace:*",
-    "@antfu/eslint-config": "^2.12.1",
-    "@types/node": "^20.12.4",
+    "@antfu/eslint-config": "^2.15.0",
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "antdv-component-resolver": "^1.0.7",
     "dayjs": "^1.11.10",
     "eslint": "^8.57.0",
     "less": "^4.2.0",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.5",
     "unocss": "^0.58.9",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
-    "unplugin-vue-router": "^0.8.5",
-    "vite": "^5.2.8",
+    "unplugin-vue-router": "^0.8.6",
+    "vite": "^5.2.9",
     "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vue-layouts": "^0.11.0",
-    "vue-tsc": "^2.0.7"
+    "vue-tsc": "^2.0.13"
   }
 }
