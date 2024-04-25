@@ -18,13 +18,13 @@
     "@types/lodash-es": "^4.17.12",
     "@v-c/utils": "^0.0.26",
     "@vueuse/core": "^10.9.0",
-    "ant-design-vue": "^4.1.2",
+    "ant-design-vue": "^4.2.1",
     "haze-md": "^0.0.6",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.7",
-    "vue": "^3.4.23",
-    "vue-i18n": "^9.13.0",
-    "vue-router": "^4.3.1"
+    "vue": "^3.4.25",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@antdv-enterprise/components": "workspace:*",
@@ -41,9 +41,9 @@
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
     "unplugin-vue-router": "^0.8.6",
-    "vite": "^5.2.9",
+    "vite": "^5.2.10",
     "vite-plugin-tsx-resolve-types": "^0.0.2",
     "vite-plugin-vue-layouts": "^0.11.0",
-    "vue-tsc": "^2.0.13"
+    "vue-tsc": "^2.0.14"
   }
 }
