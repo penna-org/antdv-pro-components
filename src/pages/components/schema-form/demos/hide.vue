@@ -25,29 +25,35 @@ const schemas = shallowRef<SchemaItem[]>([
       C: {
         text: 'C'
       }
-    }
+    },
+    onValueChange(value, action) {
+      if (value === 'C')
+        action.setHideFields(['test1', 'test2'], false)
+      else
+        action.setHideFields(['test1', 'test2'], true)
+    },
   },
   {
     dataIndex: 'test1',
     title: '测试2',
     hideInForm: true,
-    onDepend(params, action) {
-      if (params.value === 'A')
-        action.setHideInForm('test1', false)
-      else
-        action.setHideInForm('test1', true)
-    },
+    // onDepend(params, action) {
+    //   if (params.value === 'A')
+    //     action.setHideInForm('test1', false)
+    //   else
+    //     action.setHideInForm('test1', true)
+    // },
   },
   {
     dataIndex: 'test2',
     title: '测试3',
     hideInForm: true,
-    onDepend(params, action) {
-      if (params.value === 'B')
-        action.setHideInForm('test2', false)
-      else
-        action.setHideInForm('test2', true)
-    },
+    // onDepend(params, action) {
+    //   if (params.value === 'B')
+    //     action.setHideInForm('test2', false)
+    //   else
+    //     action.setHideInForm('test2', true)
+    // },
   }
 ])
 </script>
