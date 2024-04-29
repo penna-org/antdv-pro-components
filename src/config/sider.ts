@@ -59,6 +59,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
         {
           path: '/components/schema-form/request',
           title: '远程请求'
+        },
+        {
+          path: '/components/schema-form/hide',
+          title: '动态字段'
         }
       ]
     },
