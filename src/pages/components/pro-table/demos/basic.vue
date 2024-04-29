@@ -18,7 +18,7 @@ interface Data {
 const columns = shallowRef<Columns<Data>>([
   {
     dataIndex: 'name',
-    title: '姓名'
+    title: '姓名',
   },
   {
     dataIndex: 'age',
