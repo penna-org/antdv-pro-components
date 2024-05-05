@@ -63,6 +63,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
         {
           path: '/components/schema-form/hide',
           title: '动态字段'
+        },
+        {
+          path: '/components/schema-form/rules',
+          title: '动态校验'
         }
       ]
     },
