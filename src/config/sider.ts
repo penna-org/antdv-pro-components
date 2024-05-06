@@ -67,6 +67,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
         {
           path: '/components/schema-form/rules',
           title: '动态校验'
+        },
+        {
+          path: '/components/schema-form/value-change',
+          title: '赋值变化'
         }
       ]
     },
