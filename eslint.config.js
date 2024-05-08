@@ -4,6 +4,7 @@ export default antfu({
   rules: {
     'style/quote-props': 0,
     'style/brace-style': 0,
-    'style/comma-dangle': 0
+    'style/comma-dangle': 0,
+    'no-console': 0
   },
 })
