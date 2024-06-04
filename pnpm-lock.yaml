@@ -47,7 +47,7 @@ importers:
         version: 2.20.0(@vue/compiler-sfc@3.4.27)(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(less@4.2.0)(terser@5.31.0))
       '@pennajs/utils':
         specifier: ^0.0.5
-        version: 0.0.4
+        version: 0.0.5
       '@types/node':
         specifier: ^20.12.7
         version: 20.14.1
@@ -104,7 +104,7 @@ importers:
         version: 7.0.1(vue@3.4.27(typescript@5.4.5))
       '@pennajs/utils':
         specifier: ^0.0.5
-        version: 0.0.4
+        version: 0.0.5
       '@vueuse/core':
         specifier: ^10.9.0
         version: 10.10.0(vue@3.4.27(typescript@5.4.5))
@@ -147,7 +147,7 @@ importers:
         version: 7.0.1(vue@3.4.27(typescript@5.4.5))
       '@pennajs/utils':
         specifier: ^0.0.5
-        version: 0.0.4
+        version: 0.0.5
       ant-design-vue:
         specifier: ^4.2.1
         version: 4.2.1(vue@3.4.27(typescript@5.4.5))
@@ -721,8 +721,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@pennajs/utils@0.0.4':
-    resolution: {integrity: sha512-v9iKjKTV0hNjZgXmq9W60gEBNxWh7ORW2aA92+9zXub8zR2c3bnBAHKuOG4HY4RSevo49gQEwLhq92mPtd0SBA==}
+  '@pennajs/utils@0.0.5':
+    resolution: {integrity: sha512-z2hwymNNHqLQ4KRTMCUFSNZVJ2USXi7HQT1wDU4UtrE4CikQkAbdBj9TAo4n6ji6OyRnTZYg7dpx42xMtdR2kg==}
 
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
@@ -3860,7 +3860,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
 
-  '@pennajs/utils@0.0.4':
+  '@pennajs/utils@0.0.5':
     dependencies:
       '@types/lodash-es': 4.17.12
 
