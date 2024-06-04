@@ -27,6 +27,14 @@ const schemas = shallowRef<SchemaItem[]>([
     }
   },
   {
+    dataIndex: 'status1',
+    title: '选择框-1',
+    valueEnum: {
+      0: { text: '正常', value: 0 },
+      1: { text: '禁用', value: 1 },
+    }
+  },
+  {
     dataIndex: 'radioGroup',
     valueType: 'radioGroup',
     title: '选择组',
@@ -121,7 +129,7 @@ const schemas = shallowRef<SchemaItem[]>([
 const formRef = shallowRef<SchemaFormInstance>()
 function submit() {
   const data = formRef.value?.getFormData?.()
-  // eslint-disable-next-line no-console
+
   console.log(data)
 }
 </script>

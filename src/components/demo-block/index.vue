@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useClipboard } from '@v-c/utils'
+import { useClipboard } from '@pennajs/utils/dist/vue'
 import { LinkOutlined } from '@ant-design/icons-vue'
 import { camelCase } from 'lodash-es'
 import Icon from './icon.vue'

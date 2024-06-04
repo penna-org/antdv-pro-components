@@ -1,7 +1,8 @@
 import type { GlobalToken } from 'ant-design-vue/es/theme'
 import { Modal, message, notification, theme } from 'ant-design-vue'
 import { kebabCase } from 'lodash-es'
-import { canUseDom, updateCSS } from '@v-c/utils'
+import { updateCSS } from '@pennajs/utils/dist/dom/dynamc-css'
+import canUseDom from '@pennajs/utils/dist/canUseDom'
 
 import type { ModalFunc } from 'ant-design-vue/es/modal/Modal'
 
