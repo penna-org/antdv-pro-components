@@ -49,6 +49,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       title: 'SchemaForm',
       items: [
         {
+          path: '/components/schema-form/api',
+          title: 'API'
+        },
+        {
           path: '/components/schema-form/basic',
           title: '基础使用'
         },
@@ -79,6 +83,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       title: 'ProTable',
       items: [
         {
+          path: '/components/pro-table/api',
+          title: 'API'
+        },
+        {
           path: '/components/pro-table/basic',
           title: '基础使用'
         },
@@ -89,6 +97,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
         {
           path: '/components/pro-table/request',
           title: '远程请求'
+        },
+        {
+          path: '/components/pro-table/search',
+          title: '搜索配置'
         }
       ]
     }

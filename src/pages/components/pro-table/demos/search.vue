@@ -1,9 +1,9 @@
 <docs lang="zh-CN">
 ---
-title: 基本使用
+title: 搜索demo
 ---
 
-这是一个组件的基本用法。
+默认情况下会自带搜索部分，你可以通过配置某一列`search`的大小来控制哪一列可以被搜索。
 </docs>
 
 <script setup lang="ts">
@@ -27,24 +27,36 @@ const columns = shallowRef<Columns<Data>>([
   {
     dataIndex: 'address',
     title: '地址'
+  },
+  {
+    dataIndex: 'username',
+    title: '账号'
+  },
+  {
+    dataIndex: 'realName',
+    title: '真实姓名'
+  },
+  {
+    dataIndex: 'action',
+    title: '操作',
+    search: false
   }
 ])
 const data = Array.from({ length: 10 }, (_, key) => ({
   key,
   name: `Edward King ${key}`,
   age: 32,
-  address: `London, Park Lane no. ${key}`
+  address: `London, Park Lane no. ${key}`,
+  username: `admin${key}`,
+  realName: `刘${key}`
 }))
 </script>
 
 <template>
   <div>
     <ProTable
-      style="padding: 0"
       :columns="columns"
       :data-source="data"
-      :search="false"
-      :show-toolbar="false"
     />
   </div>
 </template>
