@@ -28,7 +28,7 @@
   "devDependencies": {
     "@antdv-enterprise/components": "workspace:*",
     "@antfu/eslint-config": "^2.16.0",
-    "@pennajs/utils": "^0.0.4",
+    "@pennajs/utils": "^0.0.5",
     "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
