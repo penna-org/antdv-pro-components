@@ -33,6 +33,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
     "antdv-component-resolver": "^1.0.7",
+    "bumpp": "^9.4.1",
     "dayjs": "^1.11.11",
     "eslint": "^8.57.0",
     "less": "^4.2.0",
