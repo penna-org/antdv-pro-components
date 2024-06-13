@@ -9,6 +9,7 @@ title: 搜索demo
 <script setup lang="ts">
 import type { Columns } from '@antdv-enterprise/components'
 import { ProTable } from '@antdv-enterprise/components'
+import { Tag } from 'ant-design-vue'
 
 interface Data {
   name: string
@@ -23,6 +24,30 @@ const columns = shallowRef<Columns<Data>>([
   {
     dataIndex: 'age',
     title: '年龄'
+  },
+  {
+    dataIndex: 'sex',
+    title: '性别',
+    valueEnum: {
+      0: {
+        text: '男',
+        status: 'Success',
+        render() {
+          return h(Tag, {
+            color: 'processing'
+          }, { default: () => '男' })
+        }
+      },
+      1: {
+        text: '女',
+        status: 'Error',
+        render() {
+          return h(Tag, {
+            color: 'warning'
+          }, { default: () => '女' })
+        }
+      }
+    }
   },
   {
     dataIndex: 'address',
@@ -48,7 +73,8 @@ const data = Array.from({ length: 10 }, (_, key) => ({
   age: 32,
   address: `London, Park Lane no. ${key}`,
   username: `admin${key}`,
-  realName: `刘${key}`
+  realName: `刘${key}`,
+  sex: key % 2 ? 0 : 1
 }))
 </script>
 

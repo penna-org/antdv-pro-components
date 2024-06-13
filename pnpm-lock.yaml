@@ -103,8 +103,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(vue@3.4.27(typescript@5.4.5))
       '@pennajs/utils':
-        specifier: ^0.0.5
-        version: 0.0.5
+        specifier: ^0.0.6
+        version: 0.0.6
       '@vueuse/core':
         specifier: ^10.9.0
         version: 10.10.0(vue@3.4.27(typescript@5.4.5))
@@ -723,6 +723,9 @@ packages:
 
   '@pennajs/utils@0.0.5':
     resolution: {integrity: sha512-z2hwymNNHqLQ4KRTMCUFSNZVJ2USXi7HQT1wDU4UtrE4CikQkAbdBj9TAo4n6ji6OyRnTZYg7dpx42xMtdR2kg==}
+
+  '@pennajs/utils@0.0.6':
+    resolution: {integrity: sha512-8HrlBOL5xD/BCXZb6sYrXZRHsROicgM1m4KmMYI/dmtfp0NIJHCrjEq03dLxbMJY/hzSiiav0qWZ2lAiBqkzvg==}
 
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
@@ -3861,6 +3864,10 @@ snapshots:
       fastq: 1.17.1
 
   '@pennajs/utils@0.0.5':
+    dependencies:
+      '@types/lodash-es': 4.17.12
+
+  '@pennajs/utils@0.0.6':
     dependencies:
       '@types/lodash-es': 4.17.12
 
