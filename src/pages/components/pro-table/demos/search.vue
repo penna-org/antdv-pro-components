@@ -7,8 +7,8 @@ title: 搜索demo
 </docs>
 
 <script setup lang="ts">
-import type { Columns } from '@antdv-enterprise/components'
-import { ProTable } from '@antdv-enterprise/components'
+import type { Columns } from '@antdv-pro/components'
+import { ProTable } from '@antdv-pro/components'
 import { Tag } from 'ant-design-vue'
 
 interface Data {

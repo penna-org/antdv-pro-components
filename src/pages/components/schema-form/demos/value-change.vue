@@ -7,8 +7,8 @@ title: 手动赋值
 </docs>
 
 <script setup lang="ts">
-import type { SchemaFormInstance, SchemaFormProps, SchemaItem } from '@antdv-enterprise/components'
-import { SchemaForm } from '@antdv-enterprise/components'
+import type { SchemaFormInstance, SchemaFormProps, SchemaItem } from '@antdv-pro/components'
+import { SchemaForm } from '@antdv-pro/components'
 
 const schemas = shallowRef<SchemaItem[]>([
   {

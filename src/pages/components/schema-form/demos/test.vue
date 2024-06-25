@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SchemaForm } from '@antdv-enterprise/components'
+import { SchemaForm } from '@antdv-pro/components'
 import { shallowRef } from 'vue'
 
 const schemas = shallowRef([

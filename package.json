@@ -26,7 +26,7 @@
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
-    "@antdv-enterprise/components": "workspace:*",
+    "@antdv-pro/components": "workspace:*",
     "@antfu/eslint-config": "^2.21.1",
     "@pennajs/utils": "^0.0.5",
     "@types/node": "^20.14.6",

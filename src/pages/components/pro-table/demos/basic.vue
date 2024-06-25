@@ -7,8 +7,8 @@ title: 基本使用
 </docs>
 
 <script setup lang="ts">
-import type { Columns } from '@antdv-enterprise/components'
-import { ProTable } from '@antdv-enterprise/components'
+import type { Columns } from '@antdv-pro/components'
+import { ProTable } from '@antdv-pro/components'
 
 interface Data {
   name: string

@@ -7,8 +7,8 @@ title: 基础用法
 </docs>
 
 <script lang="ts" setup>
-import type { SchemaFormInstance, SchemaItem } from '@antdv-enterprise/components'
-import { SchemaForm } from '@antdv-enterprise/components'
+import type { SchemaFormInstance, SchemaItem } from '@antdv-pro/components'
+import { SchemaForm } from '@antdv-pro/components'
 import { shallowRef } from 'vue'
 
 const schemas = shallowRef<SchemaItem[]>([

@@ -4,11 +4,11 @@
 
 ## 基本使用
 
-在`@antdv-enterprise/components`中可以直接进行导入我们的`SchemaForm`组件，然后进行使用。
+在`@antdv-pro/components`中可以直接进行导入我们的`SchemaForm`组件，然后进行使用。
 
 ```vue
 <script lang="ts" setup>
-import { SchemaForm, SchemaItem } from '@antdv-enterprise/components'
+import { SchemaForm, SchemaItem } from '@antdv-pro/components'
 interface Data {
   name: string
   age: number

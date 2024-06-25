@@ -12,8 +12,8 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["src/*"],
-      "@antdv-enterprise/layout": ["packages/layout/src"],
-      "@antdv-enterprise/components": ["packages/components/src"]
+      "@antdv-pro/layout": ["packages/layout/src"],
+      "@antdv-pro/components": ["packages/components/src"]
     },
     "resolveJsonModule": true,
     "types": [

@@ -103,11 +103,11 @@ export default defineConfig({
         replacement: path.resolve(base, 'src')
       },
       {
-        find: /^@antdv-enterprise\/layout/,
+        find: /^@antdv-pro\/layout/,
         replacement: path.resolve(base, 'packages/layout/src'),
       },
       {
-        find: /^@antdv-enterprise\/components/,
+        find: /^@antdv-pro\/components/,
         replacement: path.resolve(base, 'packages/components/src'),
       },
     ]

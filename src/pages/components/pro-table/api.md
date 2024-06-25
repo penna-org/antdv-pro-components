@@ -9,8 +9,8 @@
 ```vue
 
 <script lang="ts" setup>
-  import {ProTable} from "@antdv-enterprise/components"
-  import type { Columns } from "@antdv-enterprise/components"
+  import {ProTable} from "@antdv-pro/components"
+  import type { Columns } from "@antdv-pro/components"
   import {shallowRef} from "vue";
   
   interface DataInfo {

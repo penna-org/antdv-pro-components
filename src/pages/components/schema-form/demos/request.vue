@@ -7,8 +7,8 @@ title: 基础的远程请求
 </docs>
 
 <script setup lang="ts">
-import type { SchemaItem } from '@antdv-enterprise/components'
-import { SchemaForm } from '@antdv-enterprise/components'
+import type { SchemaItem } from '@antdv-pro/components'
+import { SchemaForm } from '@antdv-pro/components'
 
 async function api(): Promise<any> {
   return new Promise((resolve) => {

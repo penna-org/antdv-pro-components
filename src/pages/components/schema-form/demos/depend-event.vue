@@ -11,8 +11,8 @@ title: 依赖事件
 </docs>
 
 <script lang="ts" setup>
-import type { SchemaItem } from '@antdv-enterprise/components'
-import { SchemaForm } from '@antdv-enterprise/components'
+import type { SchemaItem } from '@antdv-pro/components'
+import { SchemaForm } from '@antdv-pro/components'
 
 const schemas = shallowRef<SchemaItem[]>([
   {

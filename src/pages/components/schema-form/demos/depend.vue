@@ -7,8 +7,8 @@ title: 依赖关联
 </docs>
 
 <script lang="ts" setup>
-import type { SchemaFormDependAction, SchemaItem } from '@antdv-enterprise/components'
-import { SchemaForm } from '@antdv-enterprise/components'
+import type { SchemaFormDependAction, SchemaItem } from '@antdv-pro/components'
+import { SchemaForm } from '@antdv-pro/components'
 
 const schemas = shallowRef<SchemaItem[]>([
   {
