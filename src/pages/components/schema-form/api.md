@@ -40,7 +40,33 @@
 | `wrapperCol`         | 需要为输入控件设置布局样式时，使用该属性，用法同 `labelCol`  | [object](https://antdv.com/components/grid-cn/#col) |                                                        |      |
 
 
-## 方法
+### 方法
 
 我们在`Form`的基础上，也增加了很多的属性，用于控制我们的组件的行为，这里我们列出一些常用的方法。
+
+| 方法名             | 描述                     | 回调参数                                                     | 版本 |
+| ------------------ | ------------------------ | ------------------------------------------------------------ | ---- |
+| `resetFields`      | 重置表单                 | `(name?: DataIndex) => void`                                 |      |
+| `clearValidate`    | 清空校验                 | `(name?: DataIndex) => void`                                 |      |
+| `validateFields`   | 验证表单字段             | `(nameList?: DataIndex[] \| string, options?: ValidateOptions) => Promise<{     [key: string]: any; }>` |      |
+| `getFieldsValue`   | 获取表单字段             | `(nameList?: DataIndex[] \| true) => {     [key: string]: any; }` |      |
+| `validate`         | 表单校验                 | `(nameList?: DataIndex[] \| string, options?: ValidateOptions) => Promise<{     [key: string]: any; }>` |      |
+| `scrollToField`    | 滚动到指定表单项         | `(name: DataIndex, options?: {}) => void`                    |      |
+| `setHideInForm`    | 设置某个字段的隐藏显示   | `(key: DataIndex, hide: boolean) => void`                    |      |
+| `setHideFields`    | 同时设置多个表单项隐藏   | `(keys: DataIndex[], hide: boolean) => void`                 |      |
+| `setFormItemRules` | 动态设置某个表单项的规则 | ` (dataIndex: DataIndex, rules: FormItemProps['rules']) => void` |      |
+| `setFieldsValue`   | 设置表单项的值           | `(values: Record<string, any>) => void`                      |      |
+| `setFieldValue`    | 设置某一项表单的值       | `(name: DataIndex, value: any) => void`                      |      |
+| `getFormData`      | 获取整个表单的值         | `() => Record<string, any>`                                  |      |
+| `clearModelData`   | 清空整个表单项的值       | `() => void`                                                 |      |
+
+
+
+### 事件
+
+| 事件名          | 描述                               | 类型                                                         | 版本 |
+| --------------- | ---------------------------------- | ------------------------------------------------------------ | ---- |
+| `values-change` | 用于监听表单项发生变化后触发的方法 | `(values: D, action: SchemaFormInstance) => void`            |      |
+| `value-change`  | 用于监听某个表单项的变化后触发     | `(key: DataIndex, value: any, values: D, action: SchemaFormInstance) => void` |      |
+| `validate`      | 当校验规则变化的时候会触发         | `(name: string \|number \|string[] \|number[], status: boolean, errors: string[]) => void` |      |
 
