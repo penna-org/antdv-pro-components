@@ -11,7 +11,7 @@ export interface SiteConfig {
 }
 
 export default {
-  title: 'Pro Components',
+  title: 'Antdv Pro',
   logo: '/logo.svg',
   headers: headerConfig,
   siderbar: siderConfig

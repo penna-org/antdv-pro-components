@@ -1,4 +1,6 @@
-# AntdvPro项目文档库
+# Antdv Pro Components 业务组件库
+
+提供`ant-design-vue`的高级组件:`ProLayout`、`ProTable`和`SchemaForm`，以及一些常用的业务组件。
 
 ## 安装
 

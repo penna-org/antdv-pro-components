@@ -45,6 +45,10 @@ export const siderConfig: Record<string, SiderConfigItem[]> = {
       title: '介绍'
     },
     {
+      path: '/components/api',
+      title: '通用属性'
+    },
+    {
       path: '/components/schema-form',
       title: 'SchemaForm',
       items: [
