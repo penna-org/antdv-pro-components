@@ -10,7 +10,7 @@ export const headerConfig: HeaderConfig[] = [
   },
   {
     path: '/backend',
-    title: '后端文档'
+    title: 'Java后端'
   },
   {
     path: '/components',

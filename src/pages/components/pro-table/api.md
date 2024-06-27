@@ -28,7 +28,7 @@
 </template>
 ```
 
-## 属性
+## 表格属性
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
@@ -73,4 +73,9 @@
 | tableLayout | 表格元素的 [table-layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/table-layout) 属性，设为 `fixed` 表示内容不会影响列的布局 | - \| 'auto' \| 'fixed' | 无<hr />固定表头/列或使用了 `column.ellipsis` 时，默认值为 `fixed` |  |
 | title | 表格标题 | Function(currentPageData)\|v-slot:title="currentPageData" |  |  |
 | transformCellText | 数据渲染前可以再次改变，一般用于空数据的默认配置，可以通过 [ConfigProvider](/components/config-provider-cn/) 全局统一配置 | Function({ text, column, record, index }) => any，此处的 text 是经过其它定义单元格 api 处理后的数据，有可能是 VNode \| string \| number 类型 | - |  |
+
+
+## 新增属性
+
+上面我们列举了`Antdv`的`Table`表格中的所有属性，下面我们针对`ProTable`新增的属性单独进行说明
 
