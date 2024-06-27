@@ -46,16 +46,17 @@ const headerCls = computed(() => {
       </div>
     </div>
   </a-layout-header>
-  <div style="height: 58px;" />
 </template>
 
 <style scoped lang="less">
 .haze-layout-header{
   padding-inline: unset;
   background-color: var(--haze-header-bg);
-  box-shadow: var(--haze-header-shadow);
+  //box-shadow: var(--haze-header-shadow);
+  box-sizing: border-box;
+  border-bottom: var(--haze-header-border);
   height: 58px;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(8px);

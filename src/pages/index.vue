@@ -7,7 +7,13 @@ definePage({
 </script>
 
 <template>
-  <div>
-    测试
+  <div class="flex flex-col">
+    <div class="flex items-center text-18  justify-center font-600">
+      Antdv Pro
+    </div>
   </div>
 </template>
+
+<style lang="less">
+
+</style>

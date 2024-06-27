@@ -11,6 +11,7 @@ declare module 'vue' {
     AApp: typeof import('ant-design-vue/es')['App']
     AButton: typeof import('ant-design-vue/es')['Button']
     AConfigProvider: typeof import('ant-design-vue/es')['ConfigProvider']
+    ADrawer: typeof import('ant-design-vue/es')['Drawer']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
     ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
