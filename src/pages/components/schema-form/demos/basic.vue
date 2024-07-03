@@ -142,6 +142,28 @@ const schemas = shallowRef<SchemaItem[]>([
         }
       ]
     }
+  },
+  {
+    dataIndex: 'segmented',
+    valueType: 'segmented',
+    title: '分段输入框',
+    defaultValue: '1',
+    fieldProps: {
+      options: [
+        {
+          value: '1',
+          label: '公开'
+        },
+        {
+          value: '2',
+          label: '部分公开'
+        },
+        {
+          value: '3',
+          label: '不公开'
+        }
+      ]
+    }
   }
 ])
 const formRef = shallowRef<SchemaFormInstance>()
