@@ -124,6 +124,24 @@ const schemas = shallowRef<SchemaItem[]>([
     dataIndex: 'timeRange',
     valueType: 'timeRange',
     title: '时间区间'
+  },
+  {
+    dataIndex: 'autoComplete',
+    valueType: 'autoComplete',
+    title: '自动完成',
+    fieldProps: {
+      options: [
+        {
+          value: '/api'
+        },
+        {
+          value: '/system'
+        },
+        {
+          value: '/about'
+        }
+      ]
+    }
   }
 ])
 const formRef = shallowRef<SchemaFormInstance>()
