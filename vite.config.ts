@@ -12,6 +12,7 @@ import Unocss from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Layouts from 'vite-plugin-vue-layouts'
+import { postcssIsolateStyles } from './plugins/isolateStyles'
 
 const base = fileURLToPath(new URL('.', import.meta.url))
 
@@ -60,6 +61,18 @@ export default defineConfig({
     }),
     Unocss(),
   ],
+  css: {
+    postcss: {
+      plugins: [
+        postcssIsolateStyles({
+          includeFiles: [
+            /vitepress\/index\.css/,
+            /assets\/styles\/index.less/,
+          ], // defaults to /base\.css/
+        }),
+      ],
+    },
+  },
   resolve: {
     alias: [
       {

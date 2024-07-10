@@ -22,8 +22,17 @@ const block = shallowRef({
 const title = computed(() => {
   return info.value.title ?? ''
 })
+
+function tryDecoded(str: string) {
+  try {
+    return decodeURIComponent(str)
+  } catch (e) {
+    return str
+  }
+}
+
 const desc = computed(() => {
-  return decodeURIComponent(info.value.desc ?? '')
+  return tryDecoded(info.value.desc ?? '')
 })
 async function loadComp() {
   const { default: comp } = (demosData as any)[props.src]
@@ -31,8 +40,8 @@ async function loadComp() {
   const docs = comp.__docs ?? {}
   info.value = docs[lang.value] ?? docs.default ?? {}
   block.value = {
-    code: decodeURIComponent(docs.block?.code ?? ''),
-    html: decodeURIComponent(docs.block?.html ?? '')
+    code: tryDecoded(docs.block?.code ?? ''),
+    html: tryDecoded(docs.block?.html ?? '')
   }
 }
 loadComp()
@@ -61,7 +70,7 @@ const id = computed(() => camelCase(props.src))
       <IframeBlock :src="link" />
     </template>
     <template v-else>
-      <div v-if="Comp" class="demo-block-component">
+      <div v-if="Comp" class="demo-block-component vp-raw">
         <component :is="Comp" />
       </div>
     </template>
